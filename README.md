@@ -19,28 +19,52 @@ For example, a direction represented by the complex number `z = a + bi` can be
 rotated by 90° clockwise by multiplying it with `i`: `z * i = -b + ai`.
 
 
+### Least Common Multiples (LCM) to synchronize different cycles
+
+If we need to find a common point in time or space where two or more cycles
+are synchronized and we know their cycle time (i.e. when the repeat again), we
+can use the LCM of their cycle times.
+
+The LCM can be calculated from the greatest common divisor (GCD) as follows:
+
+`LCM(a,b) = (a * b) / GCD(a,b)`
+
+with
+
+```c
+// Recursive function to return gcd of a and b 
+int gcd(int a, int b) 
+{ 
+    if (a == 0)
+        return b; 
+    return gcd(b % a, a); 
+} 
+
+// Function to return LCM of two numbers 
+int lcm(int a, int b) 
+{ 
+    return (a / gcd(a, b)) * b;
+} 
+```
+
 ## Data Structures
 
 ### Heap
 
-A heap is binary tree, but careful: it is not a binary search tree, where the
-left node is smaller and the right node is larger than the parent node.
-
-A heap must be _complete_ and fulfill the _heap property_:
+A heap is binary tree which is _complete_ and fulfills the _heap property_:
 
  * A heap is _complete_, when all nodes on all levels are filled (except for the last row).
 
  * The _heap property_ dictates that the parent node must be larger (or
-    smaller in case of min-heap) then both of its children nodes. Heaps are
-    thus often used to implement _priority queues_.
+    smaller in case of min-heaps) than its children nodes.
 
-A heap is not practical for searching nodes; you would need to visit all nodes
-which scales as O(N). A binary search tree would be more efficient for this by
-requiring only O(log N) steps.
+A heap is not practical for searching nodes since they are only _weakly
+ordered_; you would need to visit all nodes which scales as O(N). A binary
+search tree would be more efficient for this by requiring only O(log N) steps.
 
 However, a heap has efficient insertion and deletion operations which both
 scale as O(log N). The largest value (or smaller for min-heaps) are always in
-the root node.
+the root node. Hence, heaps are often used to implement _priority queues_.
 
 For insertions and deletions, we need to know the last node in the heap.  We
 can avoid this problem by representing a heap in an array. In an array, index
@@ -50,6 +74,10 @@ node in the heap.
 [heap data structure](https://www.geeksforgeeks.org/heap-data-structure/)
 
 [heap introduction](https://www.geeksforgeeks.org/introduction-to-heap/)
+
+Note: the heap is not to be confused with a binary search tree. In a binary
+search tree, the left node is always smaller and the right node is larger than
+the parent node.
 
 ## Algorithms
 
@@ -136,6 +164,6 @@ Algorithm to determine the area A of a simple polygon:
 [shoelace](https://en.wikipedia.org/wiki/Shoelace_formula)
 
 
-## Other resources
+## Further Readings
 
 [Tricks by Erikw](https://erikw.netlify.app/blog/tech/advent-of-code-tricks/)
