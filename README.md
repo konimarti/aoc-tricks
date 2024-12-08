@@ -21,9 +21,8 @@ rotated by 90° clockwise by multiplying it with `i`: `z * i = -b + ai`.
 
 ### Least Common Multiples (LCM) to synchronize different cycles
 
-If we need to find a common point in time or space where two or more cycles
-are synchronized and we know their cycle time (i.e. when the repeat again), we
-can use the LCM of their cycle times.
+To find a common point in time or space where two or more cycles are
+synchronized, we calculate the LCM of their cycle times.
 
 The LCM can be calculated from the greatest common divisor (GCD) as follows:
 
@@ -166,4 +165,6 @@ Algorithm to determine the area A of a simple polygon:
 
 ## Further Readings
 
-[Tricks by Erikw](https://erikw.netlify.app/blog/tech/advent-of-code-tricks/)
+* [Tricks by Erikw](https://erikw.netlify.app/blog/tech/advent-of-code-tricks/)
+
+* [Modulo arithmetic](https://brilliant.org/wiki/modular-arithmetic/)
