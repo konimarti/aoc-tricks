@@ -4,43 +4,48 @@
 
 ### 2D-Grid with Complex numbers
 
-A 2D grid can be stored in with a complex numbers, `z = a + bi`,
-where the real part a would represent the `x` and `b` the `y` coordinates
-respectively.
+A 2D grid can represented with complex numbers, `z = a + bi`,
+where the real part `a` would encode the `x` coordinate and the
+imaginary part `b` the `y` coordinate, respectively.
 
-Advantage of this approach is that `x`,`y` are represented by one unit.
-A rotation of the direction is easy: it's just a multiplication with the
-imaginary unit `i` (opposite direction with `-i`).
+The advantage of this approach is that the two coordinates `(x,y)` are
+stored in one unit.
 
-For example, the complex number `z = a + bi` can be rotated by 90°
-clockwise by multiplying it with i: `z * i = -b + ai`.
+A 90° rotation of the direction is easy: just multiply a complex number that
+represents the direction with the imaginary unit `i` for a clockwise rotation
+(counter-clockwise with `-i`).
+
+For example, a direction represented by the complex number `z = a + bi` can be
+rotated by 90° clockwise by multiplying it with `i`: `z * i = -b + ai`.
 
 
 ## Data Structures
 
 ### Heap
 
-A heap is binary tree (careful: it is not a binary search tree!).
-A heap must be _complete_ and fulfill the _heap property_.
+A heap is binary tree, but careful: it is not a binary search tree, where the
+left node is smaller and the right node is larger than the parent node.
 
-A heap is complete, when all nodes on all levels are filled (except for the last row).
+A heap must be _complete_ and fulfill the _heap property_:
 
-The heap property dictates that the parent node must be larger (or
-smaller in case of min-heap) then its two children nodes. Heaps are thus
-often used to implement _priority queues_.
+ * A heap is _complete_, when all nodes on all levels are filled (except for the last row).
 
-For this reason, a heap is not practical for searching nodes; you would
-need to visit all nodes which scales as O(N). A binary search tree just
-requires O(log N) steps.
+ * The _heap property_ dictates that the parent node must be larger (or
+    smaller in case of min-heap) then both of its children nodes. Heaps are
+    thus often used to implement _priority queues_.
 
-However, a heap has efficient insertions and deletions operations that
-scale as O(log N). The largest value (or smaller for min-heaps) are
-always in the root node.
+A heap is not practical for searching nodes; you would need to visit all nodes
+which scales as O(N). A binary search tree would be more efficient for this by
+requiring only O(log N) steps.
 
-For insertions and deletions, we need to now the last node in the heap.
-We can simplify this problem by representing a heap as an array. In such
-an array, index 0 would represent the root node and the last element in
-the array is the last node in the heap.
+However, a heap has efficient insertion and deletion operations which both
+scale as O(log N). The largest value (or smaller for min-heaps) are always in
+the root node.
+
+For insertions and deletions, we need to know the last node in the heap.  We
+can avoid this problem by representing a heap in an array. In an array, index
+0 would represent the root node and the last array element would be the last
+node in the heap.
 
 [heap data structure](https://www.geeksforgeeks.org/heap-data-structure/)
 
@@ -51,7 +56,7 @@ the array is the last node in the heap.
 ### Breath First Search (BFS)
 
 Underlying data structure is a *FIFO queue*. Pop an element off, process
-it, append new results to the queue, then repeat.
+it, append new results to the queue, then repeat 
 
 _Initialization:_ Enqueue the given source vertex into a queue and mark it as visited.
 
@@ -72,8 +77,8 @@ _Initialization:_ Enqueue the given source vertex into a queue and mark it as vi
 
 ### Depth First Search (DFS)
 
-Underlying data structure is a *stack*. The stack can also be the
-callstack of recursive functions.
+Underlying data structure is a *stack*. The stack can also be a local variable
+on the callstack of recursive functions.
 
 When we traverse an adjacent vertex, we completely finish the traversal
 of all vertices reachable through that adjacent vertex. After we finish
