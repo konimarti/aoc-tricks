@@ -57,7 +57,7 @@ A heap is binary tree which is _complete_ and fulfills the _heap property_:
  * The _heap property_ dictates that the parent node must be larger (or
     smaller in case of min-heaps) than its children nodes.
 
-A heap is not practical for searching nodes since they are only _weakly
+A heap is not practical for searching nodes since it is only _weakly
 ordered_; you would need to visit all nodes which scales as O(N). A binary
 search tree would be more efficient for this by requiring only O(log N) steps.
 
