@@ -114,6 +114,21 @@ the next adjacent vertex and repeat the process.
 
 [dfs](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
 
+### Memoization
+
+Technique to improve performance of recursive algorithms. Store (intermediate)
+results of subproblems that can be reused.
+
+This can usually be done for recursive algorithms that descends down into trees
+or other structures. The intermediate result are usually stored in a hash
+table.
+
+[memoization](https://www.geeksforgeeks.org/what-is-memoization-a-complete-tutorial/)
+
+An alternative dynamic programming technique is `tabulation` as it is used in
+the Knapsack, Largest Subsequences, etc.
+
+[memo vs. tables](https://www.geeksforgeeks.org/tabulation-vs-memoization/)
 
 ### Dijkstra
 
