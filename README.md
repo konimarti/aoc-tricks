@@ -123,7 +123,18 @@ Find shortest path from source to all vertices.
 
 [code in c](dijkstra.c)
 
-[cod in c3](dijkstra.c3)
+[code in c3](dijkstra.c3)
+
+### Knapsack
+
+Solve a combinatorial optimization problem: maximize value for a given
+constraint.
+
+[knapsack](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
+
+[youtube](https://www.youtube.com/watch?v=cJ21moQpofY)
+
+[youtube code in c3](knapsack.c3)
 
 ### Even-Odd rule / Non-Zero rule
 
@@ -166,5 +177,7 @@ Algorithm to determine the area A of a simple polygon:
 ## Further Readings
 
 * [Tricks by Erikw](https://erikw.netlify.app/blog/tech/advent-of-code-tricks/)
+
+* [Algorithm repository by williamfiset](https://github.com/williamfiset/algorithms)
 
 * [Modulo arithmetic](https://brilliant.org/wiki/modular-arithmetic/)
