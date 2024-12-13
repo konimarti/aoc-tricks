@@ -2,6 +2,25 @@
 
 ## Tricks
 
+### Cramer's rule: Solve linear equations
+
+Solve a system of linear equations with as many equations as unknowns.
+
+Consider `Ax = b` where `A` is a _n_x_n_ matrix. Then, in the case the system
+has an unique solution, the unknown *x_i* are given by:
+```
+x_i = det(A_i) / det(A)
+```
+where `A_i` is the matrix formed by replacing the _i_-th column of `A` by the
+column of vector `b`.
+
+[cramers rule](https://en.wikipedia.org/wiki/Cramer%27s_rule)
+
+### Counting sides of a rectilinear polygon
+
+If we need to number of sides of a rectilinear polygon (a polygon with only
+90° angles), then we can also just count _the number of corners_.
+
 ### 2D-Grid with Complex numbers
 
 A 2D grid can represented with complex numbers, `z = a + bi`,
