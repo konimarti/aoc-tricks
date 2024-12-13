@@ -6,8 +6,9 @@
 
 Solve a system of linear equations with as many equations as unknowns.
 
-Consider `Ax = b` where `A` is a _n_x_n_ matrix. Then, in the case the system
-has an unique solution, the unknown *x_i* are given by:
+Consider `Ax = b` where `A` is a (nxn)-matrix, `x` and `b` are (nx1)-vectors.
+Then, in the case the system has an unique solution, the unknown *x_i* are
+given by:
 ```
 x_i = det(A_i) / det(A)
 ```
