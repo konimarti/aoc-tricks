@@ -38,7 +38,6 @@ represents the direction with the imaginary unit `i` for a clockwise rotation
 For example, a direction represented by the complex number `z = a + bi` can be
 rotated by 90° clockwise by multiplying it with `i`: `z * i = -b + ai`.
 
-
 ### Least Common Multiples (LCM) to synchronize different cycles
 
 To find a common point in time or space where two or more cycles are
@@ -102,6 +101,9 @@ the parent node.
 
 ### Breath First Search (BFS)
 
+A tree-traversel method that explores all the options. Useful to find the
+shortest path, i.e. a global optimum.
+
 Underlying data structure is a *FIFO queue*. Pop an element off, process
 it, append new results to the queue, then repeat 
 
@@ -121,8 +123,10 @@ _Initialization:_ Enqueue the given source vertex into a queue and mark it as vi
 
 [bfs](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
-
 ### Depth First Search (DFS)
+
+Another tree-traversal method that explores the deepest branches first. Useful
+for finding solutions to a mace.
 
 Underlying data structure is a *stack*. The stack can also be a local variable
 on the callstack of recursive functions.
@@ -133,6 +137,16 @@ traversing one adjacent vertex and its reachable vertices, we move to
 the next adjacent vertex and repeat the process.
 
 [dfs](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
+
+### Topological Sorting
+
+Aligns the vertices in a DAC (directed-acyclical) graph into a linear order.
+It can be done using a DFS approach: Starting vertex is processed, i.e. all its
+adjacent vertices are visited, and afterwards pushed on the stack. Repeat this
+until all vertices have been visited. Then the vertices can be popped off the
+stack in a topological sorting order.
+
+[topological sorting](https://www.geeksforgeeks.org/topological-sorting/)
 
 ### Memoization
 
